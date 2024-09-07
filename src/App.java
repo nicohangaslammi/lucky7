@@ -9,14 +9,19 @@ public class App {
 		// Prices for amounts of seven. 1 = 3, 2 = 5 etc.
 		int[] winPrices = { 0, 3, 5, 7 };
 		int[] rolls = new int[3];
-		int winCount;
-		int currency;
+		int winCount = 0;
+		int currency = 0;
 		boolean wantToContinue = true;
 		String answer;
 
 		System.out.printf("\nLucky 7\nSyötä rahamäärä: ");
-		currency = in.nextInt();
-		in.nextLine(); // clear line break from Scanner
+		try {
+			currency = in.nextInt();
+			in.nextLine(); // clear line break from Scanner
+		} catch (Exception e) {
+			System.out.println("Raha ei ole kelvollinen. Poistutaan\n");
+			return;
+		}
 
 		while (currency > 0 && wantToContinue) {
 			currency--;
