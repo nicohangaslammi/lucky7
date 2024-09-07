@@ -20,7 +20,7 @@ public class App {
 			currency = in.nextInt();
 			in.nextLine(); // clear line break from Scanner
 		} catch (Exception e) {
-			System.out.println("Raha ei ole kelvollinen. Poistutaan\n");
+			System.out.println("Määrä ei ole kelvollinen. Poistutaan\n");
 			return;
 		}
 
