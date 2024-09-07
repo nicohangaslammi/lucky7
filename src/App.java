@@ -7,13 +7,14 @@ public class App {
 		Scanner in = new Scanner(System.in);
 
 		// Prices for amounts of seven. 1 = 3, 2 = 5 etc.
-		int[] winPrices = { 0, 3, 5, 7 };
+		int[] winPrices = { 0, 3, 4, 6 };
 		int[] rolls = new int[3];
 		int winCount = 0;
 		int currency = 0;
 		boolean wantToContinue = true;
-		String answer;
+		String userAnswer;
 
+		// Get currency amount from user
 		System.out.printf("\nLucky 7\nSyötä rahamäärä: ");
 		try {
 			currency = in.nextInt();
@@ -48,8 +49,8 @@ public class App {
 
 			if (currency > 0) {
 				System.out.printf("Paina Enter jatkaaksesi pelaamista ");
-				answer = in.nextLine();
-				wantToContinue = answer.equals("");
+				userAnswer = in.nextLine();
+				wantToContinue = userAnswer.equals("");
 			}
 		}
 
