@@ -1,2 +1,2 @@
 # lucky7
- lucky7 terminal app made using Java
+ lucky7 terminal app made using Java as a school assignment
